@@ -4,113 +4,134 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diego Chávez Ortiz · MLOps & Software Engineer</title>
-<meta name="description" content="Portafolio de Diego Chávez Ortiz: ingeniero de MLOps y software con experiencia en GCP, Vertex AI, Python y datos. CV, proyectos y contacto.">
+<meta name="description" content="Portafolio de Diego Chávez Ortiz, ingeniero de MLOps y software desde la CDMX: GCP, Vertex AI, Python y datos. CV, experiencia y contacto.">
 <meta property="og:title" content="Diego Chávez Ortiz · MLOps & Software Engineer">
-<meta property="og:description" content="MLOps, GCP, Python, React y datos. CV, experiencia y contacto.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="MLOps, GCP, Python, React y datos. Hecho en CDMX.">
+<meta property="og:image" content="assets/diego.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f0e9;--ink:#121212;--muted:#6b6862;--line:#121212;--pink:#e6007e;--sans:"Bricolage Grotesque",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif}
-@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#f3f0e9;--muted:#9a968e;--line:#f3f0e9;--pink:#ff3fa4}}
+:root{--bg:#fff;--ink:#141414;--muted:#5f5f5f;--green:#00a77f;--yellow:#f7c61a;--pink:#f08fb8;--orange:#f2683c;--blue:#3b6fd4;--cond:"Anton",Impact,sans-serif;--mono:"DM Mono",ui-monospace,monospace;--sans:"Barlow",system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-::selection{background:var(--pink);color:#fff}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:22px;height:54px;overflow-x:auto;white-space:nowrap;font-size:14px}
-nav a{text-decoration:none}nav a:hover{color:var(--pink)}
-nav .logo{font-weight:800;letter-spacing:-.02em}nav .sp{flex:1}
-.lang{font:inherit;font-size:13px;border:1px solid var(--line);background:none;color:var(--ink);border-radius:99px;padding:3px 12px;cursor:pointer}
-.lang:hover{background:var(--ink);color:var(--bg)}
-.hero{padding:72px 0 40px}
-.kicker{font-size:14px;color:var(--muted);margin-bottom:18px}
-.kicker b{color:var(--pink)}
-h1{font-weight:800;font-size:clamp(52px,13vw,150px);line-height:.88;letter-spacing:-.05em;margin:0}
-h1 em{font:italic 400 1em/.88 var(--serif);letter-spacing:-.02em;color:var(--pink)}
-.lead{font-size:clamp(19px,2.4vw,24px);max-width:640px;margin:34px 0 0;line-height:1.4}
-.lead i{font:italic 400 1.15em var(--serif)}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
-.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:9px 18px;font-size:15px;text-decoration:none;transition:.15s}
-.pill:hover{background:var(--ink);color:var(--bg)}
-.pill.fill{background:var(--pink);border-color:var(--pink);color:#fff}
-.pill.fill:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-.marquee{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;margin:40px 0 0;padding:12px 0;background:var(--ink);color:var(--bg)}
-.marquee div{display:inline-block;animation:m 28s linear infinite;font:italic 400 28px var(--serif)}
-.marquee span{margin:0 18px}.marquee span:nth-child(even){color:var(--pink);font-style:normal}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}::selection{background:var(--yellow)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.92);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:58px;overflow-x:auto;white-space:nowrap;font:500 13px var(--mono);text-transform:uppercase;letter-spacing:.04em}
+nav a{text-decoration:none}nav a:hover{color:var(--green)}
+nav .logo{font:400 26px var(--cond);letter-spacing:.02em;color:var(--green);text-transform:none}nav .sp{flex:1}
+.lang{font:inherit;border:2px solid var(--ink);background:#fff;border-radius:99px;padding:3px 12px;cursor:pointer}
+.lang:hover{background:var(--yellow)}
+h1{font:400 clamp(70px,19vw,250px)/.82 var(--cond);color:var(--green);margin:18px 0 0;text-transform:uppercase;letter-spacing:-.005em}
+h1 .chile{display:inline-block;width:.3em;height:.3em;margin-left:.04em;vertical-align:baseline;background:var(--green);border-radius:0 100% 0 100%;transform:rotate(-35deg) translateY(-.1em)}
+h1 .o{color:var(--ink)}
+.sub{font:500 clamp(14px,2.2vw,22px) var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-top:20px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.sub b{color:var(--green);font-weight:500;text-transform:none}
+.hero2{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:34px;align-items:stretch}
+.card{background:#fff;border:2.5px solid var(--ink);border-radius:28px;padding:30px 32px;box-shadow:8px 8px 0 var(--ink)}
+.card p{margin:0 0 14px;font-size:clamp(19px,2.2vw,24px);line-height:1.35}
+.card em{font-style:normal;background:var(--yellow);padding:0 6px;border-radius:6px}
+.hello{font:500 14px var(--mono);text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.photo{position:relative;border-radius:28px;overflow:hidden;border:2.5px solid var(--ink);min-height:360px;background:var(--pink)}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 35%}
+.sticker{position:absolute;font:400 22px var(--cond);text-transform:uppercase;padding:6px 16px;border:2.5px solid var(--ink);border-radius:99px;transform:rotate(-6deg);letter-spacing:.03em}
+.s1{left:14px;bottom:18px;background:var(--yellow)}.s2{right:14px;top:16px;background:var(--pink);transform:rotate(5deg)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pill{display:inline-flex;gap:8px;align-items:center;border:2.5px solid var(--ink);border-radius:99px;padding:8px 18px;font:500 14px var(--mono);text-transform:uppercase;text-decoration:none;background:#fff;transition:transform .12s}
+.pill:hover{transform:translate(-2px,-2px);background:var(--yellow)}
+.pill.go{background:var(--green);color:#fff}.pill.go:hover{background:var(--ink)}
+.cityscape{position:relative;margin-top:50px;background:#fff}
+.sky{display:block;width:100%;height:clamp(180px,26vw,330px)}
+.train{position:absolute;bottom:clamp(6px,1vw,14px);left:0;width:clamp(480px,70vw,960px);animation:go 22s linear infinite}
+@keyframes go{from{transform:translateX(-100%)}to{transform:translateX(calc(100vw + 0px))}}
+.marquee{background:var(--green);color:#fff;overflow:hidden;white-space:nowrap;padding:10px 0;border-block:3px solid var(--ink)}
+.marquee div{display:inline-block;animation:m 30s linear infinite;font:400 34px var(--cond);text-transform:uppercase;letter-spacing:.03em}
+.marquee span{margin:0 16px}.marquee span:nth-child(even){color:var(--yellow)}
 @keyframes m{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.marquee div{animation:none}}
-.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-bottom:1px solid var(--line)}
-.num{padding:28px 20px 28px 0}
-.num b{display:block;font-size:clamp(40px,6vw,64px);font-weight:800;letter-spacing:-.04em;line-height:1}
-.num span{color:var(--muted);font-size:14px}
-section{padding:72px 0 8px}
-.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
-.sh .n{color:var(--pink);font-size:14px}
-h2{font-weight:800;font-size:clamp(34px,6vw,60px);letter-spacing:-.04em;line-height:1;margin:0}
-h2 em{font:italic 400 1em var(--serif);letter-spacing:0}
-.row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
-.row:last-child{border-bottom:1px solid var(--line)}
-.row .when{color:var(--muted);font-size:14px}
-.row h3{margin:0 0 8px;font-size:24px;letter-spacing:-.02em}
-.row ul{margin:0;padding-left:18px}.row li{margin:6px 0}
-.row:hover h3{color:var(--pink)}
-@media (max-width:700px){.row{grid-template-columns:1fr;gap:6px}}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid var(--line)}
-.col{padding:24px 24px 24px 0;border-bottom:1px solid var(--line)}
-.col h3{margin:0 0 10px;font-size:15px;font-weight:600;color:var(--pink)}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{border:1px solid var(--line);border-radius:99px;padding:2px 12px;font-size:14px}
-.tag:hover{background:var(--pink);border-color:var(--pink);color:#fff}
-.big{display:block;font-weight:800;font-size:clamp(30px,7vw,80px);letter-spacing:-.04em;line-height:1.05;text-decoration:none;padding:14px 0;border-top:1px solid var(--line)}
-.big small{font:italic 400 .45em var(--serif);color:var(--muted);margin-left:10px;letter-spacing:0}
-.big:hover{color:var(--pink);padding-left:12px;transition:.2s}
-.big:last-of-type{border-bottom:1px solid var(--line)}
-footer{padding:48px 0 40px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (prefers-reduced-motion:reduce){.marquee div,.train{animation:none}}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;padding:56px 0 0}
+.num{border:2.5px solid var(--ink);border-radius:24px;padding:20px 22px}
+.num b{display:block;font:400 clamp(54px,7vw,84px)/1 var(--cond)}
+.num span{font:500 13px var(--mono);text-transform:uppercase}
+.num:nth-child(1){background:var(--yellow)}.num:nth-child(2){background:var(--pink)}.num:nth-child(3){background:#9fd9c8}.num:nth-child(4){background:#ffb08f}
+section{padding:84px 0 0}
+.sh{display:flex;align-items:flex-end;gap:16px;margin-bottom:22px}
+.sh .n{font:500 14px var(--mono);background:var(--ink);color:#fff;border-radius:99px;padding:2px 12px;margin-bottom:12px}
+h2{font:400 clamp(52px,10vw,120px)/.9 var(--cond);text-transform:uppercase;margin:0;color:var(--green)}
+.row{display:grid;grid-template-columns:190px 1fr;gap:22px;padding:26px 0;border-top:2.5px solid var(--ink)}
+.row:last-child{border-bottom:2.5px solid var(--ink)}
+.row .when{font:500 13px var(--mono);text-transform:uppercase;color:var(--muted)}
+.row h3{margin:0 0 8px;font:400 clamp(28px,4vw,42px)/1 var(--cond);text-transform:uppercase}
+.row ul{margin:0;padding-left:20px}.row li{margin:6px 0}
+.row:hover h3{color:var(--orange)}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}.hero2{grid-template-columns:1fr}.photo{min-height:380px}.card{box-shadow:5px 5px 0 var(--ink)}}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.col{border:2.5px solid var(--ink);border-radius:24px;padding:20px 22px}
+.col h3{margin:0 0 12px;font:400 26px var(--cond);text-transform:uppercase}
+.col:nth-child(6n+1){background:#e6f6f1}.col:nth-child(6n+2){background:#fff3c4}.col:nth-child(6n+3){background:#fde0ec}.col:nth-child(6n+4){background:#dfe8fb}.col:nth-child(6n+5){background:#ffe3d8}.col:nth-child(6n){background:#ece3fb}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{background:#fff;border:2px solid var(--ink);border-radius:99px;padding:1px 12px;font:500 13px var(--mono)}
+.tag:hover{background:var(--ink);color:#fff}
+.frame{background:var(--ink);border-radius:36px;padding:14px;margin-top:84px}
+.frame .inner{background:#fff;border-radius:26px;padding:clamp(22px,4vw,48px)}
+.frame h2{color:var(--ink)}.frame h2 em{color:var(--green);font-style:normal}
+.big{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font:400 clamp(34px,7vw,84px)/1.05 var(--cond);text-transform:uppercase;text-decoration:none;padding:12px 0;border-top:2.5px solid var(--ink)}
+.big small{font:500 13px var(--mono);text-transform:none;color:var(--muted)}
+.big:hover{color:var(--green);padding-left:12px;transition:.15s}
+.big:last-child{border-bottom:2.5px solid var(--ink)}
+.res{margin-top:0}
+footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 [data-l]{display:none}html[lang=es] [data-l=es],html[lang=en] [data-l=en]{display:revert}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="logo" href="#top">diego.</a>
+  <a class="logo" href="#top">DCO</a>
   <a href="#experience"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
   <a href="#skills">Skills</a>
-  <a href="#resources"><span data-l="es">Recursos</span><span data-l="en">Resources</span></a>
   <a href="#contact"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
   <span class="sp"></span>
   <button class="lang" id="lang" aria-label="Language">EN</button>
 </div></nav>
 
 <main>
-<div class="wrap hero" id="top">
-  <div class="kicker"><b>●</b> CDMX, México · <span data-l="es">disponible para platicar</span><span data-l="en">open to chat</span></div>
-  <h1>Diego<br><em>Chávez</em> Ortiz</h1>
-  <p class="lead" data-l="es">Ingeniero en Sistemas (IPN-ESCOM) que hace que los datos y el ML <i>sí funcionen</i> en producción: pipelines, modelos y dashboards en Google Cloud, desde la Ciudad de México para equipos en Norteamérica y Europa.</p>
-  <p class="lead" data-l="en">Computer Systems Engineer (IPN-ESCOM) who makes data and ML <i>actually work</i> in production: pipelines, models and dashboards on Google Cloud, from Mexico City for teams across North America and Europe.</p>
-  <div class="links">
-    <a class="pill fill" href="assets/CV_Diego_Chavez_Ortiz.pdf" download>↓ <span data-l="es">Descargar CV</span><span data-l="en">Download CV</span></a>
-    <a class="pill" href="https://www.linkedin.com/in/diego-chavez-ortiz-159639210/" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="pill" href="https://www.instagram.com/diegort_chvz/" target="_blank" rel="noopener">Instagram ↗</a>
-    <a class="pill" href="https://github.com/DiegoChavezO" target="_blank" rel="noopener">GitHub ↗</a>
+<div class="wrap" id="top">
+  <h1>Diego<br>Chávez<span class="chile" aria-hidden="true"></span></h1>
+  <div class="sub"><span>MLOps · Software · Datos</span><b data-l="es">¿Qué sistema estamos construyendo?</b><b data-l="en">What system are we building?</b></div>
+  <div class="hero2">
+    <div class="card">
+      <div class="hello"><span data-l="es">Hola, soy Diego — chilango de cepa</span><span data-l="en">Hi, I'm Diego — Mexico City born and raised</span></div>
+      <p data-l="es">Ingeniero en Sistemas (IPN-ESCOM). Hago que los datos y el ML <em>sí funcionen</em> en producción: pipelines, modelos y dashboards en Google Cloud para equipos de Norteamérica y Europa.</p>
+      <p data-l="en">Computer Systems Engineer (IPN-ESCOM). I make data and ML <em>actually work</em> in production: pipelines, models and dashboards on Google Cloud for teams across North America and Europe.</p>
+      <div class="links">
+        <a class="pill go" href="assets/CV_Diego_Chavez_Ortiz.pdf" download>↓ <span data-l="es">Descargar CV</span><span data-l="en">Download CV</span></a>
+        <a class="pill" href="https://www.linkedin.com/in/diego-chavez-ortiz-159639210/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="pill" href="https://www.instagram.com/diegort_chvz/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a class="pill" href="https://github.com/DiegoChavezO" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="assets/diego.webp" alt="Diego Chávez sentado en unas escaleras de mosaico" width="640" height="640">
+      <span class="sticker s2">CDMX</span><span class="sticker s1">MLOps Engineer</span>
+    </div>
   </div>
 </div>
 
+<div class="cityscape"><svg class="sky" viewBox="0 0 1400 330" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Ilustración de la Ciudad de México"><g transform="translate(0,50)"><rect x="-10" y="130" width="100" height="120" fill="#f7c61a"/><path d="M-10 130 q50.0 -34 100 0z" fill="#f7c61a"/><rect x="2" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="28" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="54" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="2" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="28" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="54" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="2" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="28" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="54" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="31.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="96" y="160" width="70" height="90" fill="#f08fb8"/><rect x="108" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="134" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="108" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="134" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="122.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="176" y="100" width="70" height="150" fill="#f2683c"/><rect x="172" y="92" width="78" height="10" fill="#1b1b1b" opacity=".15"/><rect x="188" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="214" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="188" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="214" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="188" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="214" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="188" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="214" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="202.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="256" y="40" width="70" height="210" fill="#3b6fd4"/><rect x="268" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="268" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="268" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="268" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="268" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="268" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="294" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="282.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="326" y="160" width="70" height="90" fill="#2bb28f"/><path d="M326 160 q35.0 -34 70 0z" fill="#2bb28f"/><rect x="338" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="364" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="338" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="364" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="352.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="402" y="160" width="120" height="90" fill="#f4a089"/><rect x="414" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="440" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="466" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="492" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="414" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="440" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="466" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="492" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="453.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="522" y="40" width="70" height="210" fill="#d8402f"/><rect x="518" y="32" width="78" height="10" fill="#1b1b1b" opacity=".15"/><rect x="534" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="534" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="534" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="534" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="534" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="534" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="560" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="548.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="598" y="40" width="70" height="210" fill="#b79ae8"/><rect x="610" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="610" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="610" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="610" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="610" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="610" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="636" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="624.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="668" y="40" width="86" height="210" fill="#ffd95e"/><path d="M668 40 q43.0 -34 86 0z" fill="#ffd95e"/><rect x="680" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="680" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="680" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="680" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="680" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="680" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="706" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="732" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="702.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="754" y="160" width="120" height="90" fill="#f7c61a"/><rect x="766" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="792" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="818" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="844" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="766" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="792" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="818" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="844" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="805.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="874" y="40" width="70" height="210" fill="#f08fb8"/><rect x="870" y="32" width="78" height="10" fill="#1b1b1b" opacity=".15"/><rect x="886" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="886" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="886" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="886" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="886" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="886" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="912" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="900.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="944" y="70" width="100" height="180" fill="#f2683c"/><rect x="956" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="982" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1008" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="956" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="982" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1008" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="956" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="982" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1008" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="956" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="982" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1008" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="956" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="982" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1008" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="985.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="1044" y="40" width="70" height="210" fill="#3b6fd4"/><path d="M1044 40 q35.0 -34 70 0z" fill="#3b6fd4"/><rect x="1056" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1056" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1056" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1056" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1056" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1056" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1082" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1070.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="1120" y="160" width="86" height="90" fill="#2bb28f"/><rect x="1132" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1158" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1184" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1132" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1158" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1184" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1154.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="1216" y="100" width="86" height="150" fill="#f4a089"/><rect x="1212" y="92" width="94" height="10" fill="#1b1b1b" opacity=".15"/><rect x="1228" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1254" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1280" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1228" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1254" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1280" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1228" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1254" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1280" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1228" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1254" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1280" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1250.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="1302" y="40" width="70" height="210" fill="#d8402f"/><rect x="1314" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="56" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1314" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1314" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1314" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1314" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1314" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1340" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1328.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><rect x="1372" y="70" width="86" height="180" fill="#b79ae8"/><path d="M1372 70 q43.0 -34 86 0z" fill="#b79ae8"/><rect x="1384" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1410" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1436" y="86" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1384" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1410" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1436" y="116" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1384" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1410" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1436" y="146" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1384" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1410" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1436" y="176" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1384" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1410" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1436" y="206" width="12" height="16" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="1406.0" y="224" width="18" height="26" rx="9" fill="#1b1b1b" opacity=".78"/><g><rect x="700" y="40" width="60" height="210" fill="#f2683c"/><rect x="710" y="14" width="40" height="30" fill="#f7c61a"/><rect x="728" y="-30" width="4" height="48" fill="#1b1b1b"/><rect x="710" y="60" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="60" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="60" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="710" y="88" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="88" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="88" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="710" y="116" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="116" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="116" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="710" y="144" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="144" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="144" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="710" y="172" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="172" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="172" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="710" y="200" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="726" y="200" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/><rect x="742" y="200" width="8" height="14" rx="2" fill="#1b1b1b" opacity=".78"/></g><g><rect x="1040" y="150" width="46" height="100" fill="#ffd95e"/><rect x="1057" y="40" width="12" height="112" fill="#f4a089"/><circle cx="1063" cy="30" r="10" fill="#f7c61a"/><path d="M1063 28 l-26 -14 l8 22z M1063 28 l26 -14 l-8 22z" fill="#f7c61a"/></g><circle cx="40" cy="236" r="16" fill="#1f9d78"/><rect x="38" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="210" cy="236" r="16" fill="#1f9d78"/><rect x="208" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="380" cy="236" r="16" fill="#1f9d78"/><rect x="378" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="550" cy="236" r="16" fill="#1f9d78"/><rect x="548" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="720" cy="236" r="16" fill="#1f9d78"/><rect x="718" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="890" cy="236" r="16" fill="#1f9d78"/><rect x="888" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="1060" cy="236" r="16" fill="#1f9d78"/><rect x="1058" y="244" width="4" height="8" fill="#1b1b1b"/><circle cx="1230" cy="236" r="16" fill="#1f9d78"/><rect x="1228" y="244" width="4" height="8" fill="#1b1b1b"/></g><rect y="300" width="1400" height="30" fill="#1b1b1b"/><rect y="312" width="1400" height="4" fill="#f7c61a"/></svg><svg class="train" viewBox="0 0 960 50" aria-hidden="true"><g transform="translate(0,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g><g transform="translate(160,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g><g transform="translate(320,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g><g transform="translate(480,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g><g transform="translate(640,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g><g transform="translate(800,0)"><rect width="150" height="46" rx="8" fill="#f2683c"/><rect y="30" width="150" height="8" fill="#1f9d78"/><rect x="12" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="47" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="82" y="9" width="24" height="18" rx="3" fill="#fff"/><rect x="117" y="9" width="24" height="18" rx="3" fill="#fff"/></g></svg></div>
 <div class="marquee" aria-hidden="true"><div>
-  <span>MLOps</span><span>✺</span><span>¡qué onda!</span><span>✺</span><span>Python</span><span>✺</span><span>Vertex AI</span><span>✺</span><span>échale ganas</span><span>✺</span><span>GCP</span><span>✺</span><span>Hecho en CDMX</span><span>✺</span><span>React</span><span>✺</span><span>a huevo</span><span>✺</span>
-  <span>MLOps</span><span>✺</span><span>¡qué onda!</span><span>✺</span><span>Python</span><span>✺</span><span>Vertex AI</span><span>✺</span><span>échale ganas</span><span>✺</span><span>GCP</span><span>✺</span><span>Hecho en CDMX</span><span>✺</span><span>React</span><span>✺</span><span>a huevo</span><span>✺</span>
+  <span>MLOps</span><span>✺</span><span>¡qué onda!</span><span>✺</span><span>Python</span><span>✺</span><span>Vertex AI</span><span>✺</span><span>échale ganas</span><span>✺</span><span>GCP</span><span>✺</span><span>Hecho en CDMX</span><span>✺</span><span>a huevo</span><span>✺</span><span>MLOps</span><span>✺</span><span>¡qué onda!</span><span>✺</span><span>Python</span><span>✺</span><span>Vertex AI</span><span>✺</span><span>échale ganas</span><span>✺</span><span>GCP</span><span>✺</span><span>Hecho en CDMX</span><span>✺</span><span>a huevo</span><span>✺</span>
 </div></div>
 
 <div class="wrap">
 <div class="nums">
-  <div class="num"><b>12k+</b><span data-l="es">activos rastreados con IA + RAG</span><span data-l="en">assets tracked with AI + RAG</span></div>
+  <div class="num"><b>12K+</b><span data-l="es">activos rastreados con IA + RAG</span><span data-l="en">assets tracked with AI + RAG</span></div>
   <div class="num"><b>250</b><span data-l="es">nodos de red rediseñados</span><span data-l="en">network nodes redesigned</span></div>
   <div class="num"><b>5</b><span data-l="es">plantas de manufactura</span><span data-l="en">manufacturing sites</span></div>
   <div class="num"><b>88</b><span data-l="es">promedio /100 en la carrera</span><span data-l="en">bachelor's GPA /100</span></div>
 </div>
 
 <section id="experience">
-  <div class="sh"><span class="n">01</span><h2><span data-l="es">Lo que he <em>hecho</em></span><span data-l="en">What I've <em>done</em></span></h2></div>
+  <div class="sh"><span class="n">01</span><h2><span data-l="es">Experiencia</span><span data-l="en">Experience</span></h2></div>
   <div class="row"><div class="when"><span data-l="es">Jul 2025 – Actualidad</span><span data-l="en">Jul 2025 – Present</span></div><div><h3>MLOps Engineer</h3><ul data-l="es">
       <li>Diseño y mantengo pipelines ETL en GCP y soluciones end-to-end para el cálculo de reservas de garantía: procesamiento en Python y SQL, modelos en Vertex AI o clusters Dataproc (PySpark) y dashboards en Power BI para ingeniería en Norteamérica y Europa.</li>
       <li>Construí y desplegué pipelines de inferencia en Vertex AI con Kubeflow Pipelines para modelos de pronóstico (Random Forest y NHPP) que predicen tasas y costos de reparación por unidad.</li>
@@ -134,12 +155,12 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px;display:flex;justif
       <li>Developed and launched an AI-powered asset tracking solution on GCP (RAG chatbot, Python, internal APIs) covering 12,000+ assets across Mexico, saving ~24 hours of operational effort.</li>
       <li>Helped implement IT services for a new software automation lab (redesign of 250 network nodes), coordinating cross-functional teams and tracking progress.</li>
     </ul></div></div>
-
-  <div class="row"><div class="when">2022 · IPN</div><div><h3>BEIFI</h3>
+<div class="row"><div class="when">2022 · IPN</div><div><h3>BEIFI</h3>
     <ul data-l="es"><li>Beca de formación en investigación: patrones de comportamiento en pacientes mexicanos con COVID-19 mediante minería de reglas de asociación.</li></ul>
     <ul data-l="en"><li>Research-training scholarship: behavior patterns in Mexican COVID-19 patients using association rule mining.</li></ul></div></div>
-  <div class="row"><div class="when">2024 · IPN-ESCOM</div><div><h3><span data-l="es">Ing. en Sistemas Computacionales</span><span data-l="en">B.Sc. Computer Systems Engineering</span></h3>
+<div class="row"><div class="when">2024 · IPN-ESCOM</div><div><h3><span data-l="es">Ing. en Sistemas Computacionales</span><span data-l="en">B.Sc. Computer Systems Engineering</span></h3>
     <ul><li>GPA 88/100</li></ul></div></div>
+
 </section>
 
 <section id="skills">
@@ -154,19 +175,15 @@ footer{padding:48px 0 40px;color:var(--muted);font-size:14px;display:flex;justif
   </div>
 </section>
 
-<section id="resources">
-  <div class="sh"><span class="n">03</span><h2><span data-l="es">Recursos</span><span data-l="en">Resources</span></h2></div>
-  <a class="big" href="assets/CV_Diego_Chavez_Ortiz.pdf" download>CV 2026 <small data-l="es">PDF ↓</small><small data-l="en">PDF ↓</small></a>
+<div class="frame" id="contact"><div class="inner">
+  <div class="sh"><span class="n">03</span><h2><span data-l="es">Hablemos, <em>va</em></span><span data-l="en">Let's <em>talk</em></span></h2></div>
+  <a class="big" href="assets/CV_Diego_Chavez_Ortiz.pdf" download>CV 2026 <small>PDF ↓</small></a>
   <!-- Agrega aquí más recursos: certificados, presentaciones en /assets -->
-</section>
-
-<section id="contact">
-  <div class="sh"><span class="n">04</span><h2><span data-l="es">Hablemos, <em>va</em></span><span data-l="en">Let's <em>talk</em></span></h2></div>
-  <a class="big" href="mailto:diegochavor@gmail.com">diegochavor@gmail.com</a>
+  <a class="big" href="mailto:diegochavor@gmail.com">Email <small>diegochavor@gmail.com</small></a>
   <a class="big" href="https://www.linkedin.com/in/diego-chavez-ortiz-159639210/" target="_blank" rel="noopener">LinkedIn <small>↗</small></a>
   <a class="big" href="https://www.instagram.com/diegort_chvz/" target="_blank" rel="noopener">Instagram <small>@diegort_chvz ↗</small></a>
   <a class="big" href="https://github.com/DiegoChavezO" target="_blank" rel="noopener">GitHub <small>↗</small></a>
-</section>
+</div></div>
 
 <footer><span>© <span id="y"></span> Diego Chávez Ortiz</span><span>Hecho en CDMX con cariño ✺</span></footer>
 </div>
