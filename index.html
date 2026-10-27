@@ -32,7 +32,7 @@ h1 .o{color:var(--ink)}
 .hero2{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:34px;align-items:stretch}
 .card{background:var(--surface);border:2.5px solid var(--ink);border-radius:28px;padding:30px 32px;box-shadow:8px 8px 0 var(--ink)}
 .card p{margin:0 0 14px;font-size:clamp(19px,2.2vw,24px);line-height:1.35}
-.card em{font-style:normal;background:var(--yellow);color:var(--dark);padding:0 6px;border-radius:6px}
+.card em,.hl{font-style:normal;background:var(--yellow);color:var(--dark);padding:0 6px;border-radius:6px}
 .hello{font:500 14px var(--mono);text-transform:uppercase;color:var(--muted);margin-bottom:10px}
 .photo{position:relative;border-radius:28px;overflow:hidden;border:2.5px solid var(--ink);min-height:360px;background:var(--pink)}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 35%}
@@ -78,6 +78,13 @@ h2{font:400 clamp(52px,10vw,120px)/.9 var(--cond);text-transform:uppercase;margi
 .big:hover{color:var(--green);padding-left:12px;transition:.15s}
 .big:last-child{border-bottom:2.5px solid var(--ink)}
 .res{margin-top:0}
+.lc{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;align-items:center}
+.lc p{margin:0 0 18px;font-size:clamp(19px,2.2vw,24px);line-height:1.35}
+.lc-card{display:block;background:var(--surface);border:2.5px solid var(--ink);border-radius:28px;padding:18px;box-shadow:8px 8px 0 var(--ink);transition:transform .12s}
+.lc-card:hover{transform:translate(-3px,-3px)}
+.lc-card img{display:block;width:100%;height:auto;aspect-ratio:500/320}
+.lc-card .d,:root[data-theme=dark] .lc-card .l{display:none}:root[data-theme=dark] .lc-card .d{display:block}
+@media (max-width:760px){.lc{grid-template-columns:1fr}.lc-card{box-shadow:5px 5px 0 var(--ink)}}
 footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 [data-l]{display:none}html[lang=es] [data-l=es],html[lang=en] [data-l=en]{display:revert}
 </style>
@@ -87,6 +94,7 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
   <a class="logo" href="#top">DCO</a>
   <a href="#experience"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
   <a href="#skills">Skills</a>
+  <a href="#leetcode">LeetCode</a>
   <a href="#contact"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
   <span class="sp"></span>
   <button class="lang" id="theme" aria-label="Modo oscuro">☾</button>
@@ -171,8 +179,23 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
   </div>
 </section>
 
+<section id="leetcode">
+  <div class="sh"><span class="n">03</span><h2>LeetCode</h2></div>
+  <div class="lc">
+    <div>
+      <p data-l="es">Practico algoritmos y estructuras de datos para mantener <em class="hl">filoso</em> el código. Mi progreso, en vivo:</p>
+      <p data-l="en">I practice algorithms and data structures to keep my code <em class="hl">sharp</em>. My progress, live:</p>
+      <a class="pill" href="https://leetcode.com/u/diegoCh/" target="_blank" rel="noopener"><span data-l="es">Ver perfil</span><span data-l="en">View profile</span> ↗</a>
+    </div>
+    <a class="lc-card" href="https://leetcode.com/u/diegoCh/" target="_blank" rel="noopener" aria-label="LeetCode @diegoCh">
+      <img class="l" src="https://leetcard.jacoblin.cool/diegoCh?ext=heatmap&amp;animation=false&amp;font=Barlow&amp;border=0&amp;radius=0&amp;colors=ffffff,ececec,141414,5f5f5f,00a77f,00a77f,f7c61a,f2683c" alt="Estadísticas de LeetCode de diegoCh" width="500" height="320" loading="lazy">
+      <img class="d" src="https://leetcard.jacoblin.cool/diegoCh?ext=heatmap&amp;animation=false&amp;font=Barlow&amp;border=0&amp;radius=0&amp;colors=1c1c1c,2e2e2e,f2efe8,a8a8a8,00a77f,00a77f,f7c61a,f2683c" alt="Estadísticas de LeetCode de diegoCh" width="500" height="320" loading="lazy">
+    </a>
+  </div>
+</section>
+
 <div class="frame" id="contact"><div class="inner">
-  <div class="sh"><span class="n">03</span><h2><span data-l="es">Hablemos, <em>va</em></span><span data-l="en">Let's <em>talk</em></span></h2></div>
+  <div class="sh"><span class="n">04</span><h2><span data-l="es">Hablemos, <em>va</em></span><span data-l="en">Let's <em>talk</em></span></h2></div>
   <a class="big" href="assets/CV_Diego_Chavez_Ortiz.pdf" download>CV 2026 <small>PDF ↓</small></a>
   <!-- Agrega aquí más recursos: certificados, presentaciones en /assets -->
   <a class="big" href="mailto:diegochavor@gmail.com">Email <small>diegochavor@gmail.com</small></a>
