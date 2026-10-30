@@ -14,7 +14,7 @@
 <style>
 :root{--bg:#fff;--surface:#fff;--nav:rgba(255,255,255,.92);--ink:#141414;--muted:#5f5f5f;--dark:#141414;--c1:#e6f6f1;--c2:#fff3c4;--c3:#fde0ec;--c4:#dfe8fb;--c5:#ffe3d8;--c6:#ece3fb;--green:#00a77f;--yellow:#f7c61a;--pink:#f08fb8;--orange:#f2683c;--blue:#3b6fd4;--cond:"Anton",Impact,sans-serif;--mono:"DM Mono",ui-monospace,monospace;--sans:"Barlow",system-ui,sans-serif;color-scheme:light}
 :root[data-theme=dark]{--bg:#111;--surface:#1c1c1c;--nav:rgba(17,17,17,.9);--ink:#f2efe8;--muted:#a8a8a8;--c1:#163a30;--c2:#3b3214;--c3:#3d2230;--c4:#1d2a45;--c5:#42261b;--c6:#2d2443;color-scheme:dark}
-*{box-sizing:border-box}html{scroll-behavior:smooth}main{overflow-x:clip}
+*{box-sizing:border-box}html{scroll-behavior:smooth}main{overflow-x:hidden;overflow-x:clip}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit}::selection{background:var(--yellow);color:var(--dark)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -42,16 +42,27 @@ h1 .o{color:var(--ink)}
 .pill{display:inline-flex;gap:8px;align-items:center;border:2.5px solid var(--ink);border-radius:99px;padding:8px 18px;font:500 14px var(--mono);text-transform:uppercase;text-decoration:none;background:var(--surface);transition:transform .12s}
 .pill:hover{transform:translate(-2px,-2px);background:var(--yellow);color:var(--dark)}
 .pill.go{background:var(--green);color:#fff}.pill.go:hover{background:var(--ink);color:var(--bg)}
-.cityscape{position:relative;margin-top:50px;background:var(--bg)}
+.cityscape{position:relative;margin-top:50px;background:var(--bg);overflow:hidden}
 .sky{display:block;width:100%;height:clamp(180px,26vw,330px)}
 .train{position:absolute;bottom:clamp(6px,1vw,14px);left:0;width:clamp(480px,70vw,960px);animation:go 22s linear infinite}
 @keyframes go{from{transform:translateX(-100%)}to{transform:translateX(calc(100vw + 0px))}}
 @media (prefers-reduced-motion:reduce){.train{animation:none}}
 .nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;padding:56px 0 0}
-.num{color:var(--dark);border:2.5px solid var(--ink);border-radius:24px;padding:20px 22px}
+.num{display:grid;perspective:900px;cursor:pointer;outline:none}
+.num>div{grid-area:1/1;position:relative;border:2.5px solid var(--ink);border-radius:24px;padding:20px 22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:transform .55s cubic-bezier(.3,1.35,.5,1)}
+.front{color:var(--dark)}.front::after{content:"↻";position:absolute;top:14px;right:18px;font:500 18px var(--mono);opacity:.45;transition:transform .3s}
+.num:hover .front::after{transform:rotate(180deg)}
+.back{transform:rotateY(180deg);background:var(--dark);color:#f2efe8;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.back p{margin:0;font-size:16px;line-height:1.35}
+.back a{font:500 12px var(--mono);text-transform:uppercase;text-decoration:none;color:var(--c)}.back a:hover{text-decoration:underline}
+.num.on .front,.num:focus-visible .front,.num:has(a:focus-visible) .front{transform:rotateY(-180deg)}.num.on .back,.num:focus-visible .back,.num:has(a:focus-visible) .back{transform:rotateY(0)}
+@media (hover:hover){.num:hover .front{transform:rotateY(-180deg)}.num:hover .back{transform:rotateY(0)}}
+@media (prefers-reduced-motion:reduce){.num>div{transition:none}}
+.row{scroll-margin-top:72px}.row:target{animation:flash 2.2s ease-out}
+@keyframes flash{from{background:rgba(247,198,26,.45)}to{background:transparent}}
 .num b{display:block;font:400 clamp(54px,7vw,84px)/1 var(--cond)}
-.num span{font:500 13px var(--mono);text-transform:uppercase}
-.num:nth-child(1){background:var(--yellow)}.num:nth-child(2){background:var(--pink)}.num:nth-child(3){background:#9fd9c8}.num:nth-child(4){background:#ffb08f}
+.front span{font:500 13px var(--mono);text-transform:uppercase}
+.num:nth-child(1){--c:var(--yellow)}.num:nth-child(2){--c:var(--pink)}.num:nth-child(3){--c:#9fd9c8}.num:nth-child(4){--c:#ffb08f}.front{background:var(--c)}
 section{padding:84px 0 0}
 .sh{display:flex;align-items:flex-end;gap:16px;margin-bottom:22px}
 .sh .n{font:500 14px var(--mono);background:var(--ink);color:var(--bg);border-radius:99px;padding:2px 12px;margin-bottom:12px}
@@ -98,6 +109,24 @@ a.tag:hover::before,a.tag:focus-visible::before{opacity:1}
 .lc-card .d,:root[data-theme=dark] .lc-card .l{display:none}:root[data-theme=dark] .lc-card .d{display:block}
 @media (max-width:760px){.lc{grid-template-columns:1fr}.lc-card{box-shadow:5px 5px 0 var(--ink)}}
 footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media (max-width:560px){
+.wrap{padding:0 16px}
+nav .wrap{gap:14px;font-size:12px;height:52px}nav .opt{display:none}nav .logo{font-size:24px}.lang{padding:3px 10px}
+h1{margin-top:12px}.sub{margin-top:14px;gap:6px 12px}.hero2{margin-top:22px;gap:18px}
+.card{padding:22px 20px;border-radius:22px}.photo{min-height:320px;border-radius:22px}.sticker{font-size:18px}
+.links{gap:8px}.pill{padding:7px 14px;font-size:12px}
+.cityscape{margin-top:36px}
+.nums{grid-template-columns:1fr 1fr;gap:12px;padding-top:36px}
+.num>div{padding:14px 14px 16px;border-radius:18px}.num b{font-size:46px}.front{line-height:1.25}.front span{font-size:11px}.num b{margin-bottom:4px}
+.front::after{top:10px;right:12px;font-size:15px}.back p{font-size:13.5px;line-height:1.3}.back a{font-size:10.5px}
+section{padding-top:60px}.sh{gap:12px;margin-bottom:14px}.sh .n{margin-bottom:8px}
+.row{padding:20px 0}.row ul{padding-left:18px;font-size:16px}
+.col{padding:18px;border-radius:20px}.tag{font-size:12px}
+.lc{gap:18px}.lc-card{padding:8px;border-radius:20px}
+.frame{border-radius:26px;padding:8px;margin-top:60px}.frame .inner{border-radius:20px;padding:20px 16px}
+.big{flex-wrap:wrap;gap:2px 12px}.big small{font-size:12px}
+footer{padding:26px 0 32px;font-size:11px}
+}
 [data-l]{display:none}html[lang=es] [data-l=es],html[lang=en] [data-l=en]{display:revert}
 </style>
 </head>
@@ -105,8 +134,8 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
 <nav><div class="wrap">
   <a class="logo" href="#top">DCO</a>
   <a href="#experience"><span data-l="es">Experiencia</span><span data-l="en">Experience</span></a>
-  <a href="#skills">Skills</a>
-  <a href="#leetcode">LeetCode</a>
+  <a class="opt" href="#skills">Skills</a>
+  <a class="opt" href="#leetcode">LeetCode</a>
   <a href="#contact"><span data-l="es">Contacto</span><span data-l="en">Contact</span></a>
   <span class="sp"></span>
   <button class="lang" id="theme" aria-label="Modo oscuro">☾</button>
@@ -140,15 +169,15 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
 
 <div class="wrap">
 <div class="nums">
-  <div class="num"><b>12K+</b><span data-l="es">activos rastreados con IA + RAG</span><span data-l="en">assets tracked with AI + RAG</span></div>
-  <div class="num"><b>250</b><span data-l="es">nodos de red rediseñados</span><span data-l="en">network nodes redesigned</span></div>
-  <div class="num"><b>5</b><span data-l="es">plantas de manufactura</span><span data-l="en">manufacturing sites</span></div>
-  <div class="num"><b>88</b><span data-l="es">promedio /100 en la carrera</span><span data-l="en">bachelor's GPA /100</span></div>
+  <div class="num" tabindex="0"><div class="front"><b>12K+</b><span data-l="es">activos rastreados con IA + RAG</span><span data-l="en">assets tracked with AI + RAG</span></div><div class="back"><p data-l="es">Un chatbot con RAG en GCP que sabe dónde está cada activo de TI en México. Ahorró ~24 horas de trabajo operativo.</p><p data-l="en">A RAG chatbot on GCP that knows where every IT asset in Mexico is. Saved ~24 hours of operational work.</p><a href="#x-it"><span data-l="es">verlo en experiencia ↓</span><span data-l="en">see it in experience ↓</span></a></div></div>
+  <div class="num" tabindex="0"><div class="front"><b id="yrs">3+</b><span data-l="es">años construyendo software en la industria</span><span data-l="en">years shipping software in industry</span></div><div class="back"><p data-l="es">Trainee de IT Ops → Software Engineer → MLOps Engineer. De operar sistemas a llevar modelos a producción.</p><p data-l="en">IT Ops trainee → Software Engineer → MLOps Engineer. From running systems to shipping models to production.</p><a href="#x-mlops"><span data-l="es">verlo en experiencia ↓</span><span data-l="en">see it in experience ↓</span></a></div></div>
+  <div class="num" tabindex="0"><div class="front"><b>2</b><span data-l="es">continentes usan lo que construyo</span><span data-l="en">continents use what I build</span></div><div class="back"><p data-l="es">Pipelines y dashboards de reservas de garantía que usan equipos de ingeniería en Norteamérica y Europa.</p><p data-l="en">Warranty-reserve pipelines and dashboards used by engineering teams in North America and Europe.</p><a href="#x-mlops"><span data-l="es">verlo en experiencia ↓</span><span data-l="en">see it in experience ↓</span></a></div></div>
+  <div class="num" tabindex="0"><div class="front"><b>88</b><span data-l="es">promedio /100 en la carrera</span><span data-l="en">bachelor's GPA /100</span></div><div class="back"><p data-l="es">Ing. en Sistemas por IPN-ESCOM, más beca de investigación BEIFI: minería de datos de pacientes con COVID-19.</p><p data-l="en">Computer Systems Eng. at IPN-ESCOM, plus a BEIFI research grant mining COVID-19 patient data.</p><a href="#x-escom"><span data-l="es">verlo en experiencia ↓</span><span data-l="en">see it in experience ↓</span></a></div></div>
 </div>
 
 <section id="experience">
   <div class="sh"><span class="n">01</span><h2><span data-l="es">Experiencia</span><span data-l="en">Experience</span></h2></div>
-  <div class="row"><div class="when"><span data-l="es">Jul 2025 – Actualidad</span><span data-l="en">Jul 2025 – Present</span></div><div><h3>MLOps Engineer</h3><ul data-l="es">
+  <div class="row" id="x-mlops"><div class="when"><span data-l="es">Jul 2025 – Actualidad</span><span data-l="en">Jul 2025 – Present</span></div><div><h3>MLOps Engineer</h3><ul data-l="es">
       <li>Diseño y mantengo pipelines ETL en GCP y soluciones end-to-end para el cálculo de reservas de garantía: procesamiento en Python y SQL, modelos en Vertex AI o clusters Dataproc (PySpark) y dashboards en Power BI para ingeniería en Norteamérica y Europa.</li>
       <li>Construí y desplegué pipelines de inferencia en Vertex AI con Kubeflow Pipelines para modelos de pronóstico (Random Forest y NHPP) que predicen tasas y costos de reparación por unidad.</li>
     </ul><ul data-l="en">
@@ -164,7 +193,7 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
       <li>Built a GCP-native vulnerability dashboard in Qlik Sense with ETL pipelines from GCP metadata and Artifact Registry.</li>
       <li>DevOps and frontend (Streamlit) work on a tool visualizing web-crawler data to detect data leaks on the Ford.com domain.</li>
     </ul></div></div>
-<div class="row"><div class="when"><span data-l="es">Sep 2023 – Dic 2024</span><span data-l="en">Sep 2023 – Dec 2024</span></div><div><h3>IT Operations Engineer Trainee</h3><ul data-l="es">
+<div class="row" id="x-it"><div class="when"><span data-l="es">Sep 2023 – Dic 2024</span><span data-l="en">Sep 2023 – Dec 2024</span></div><div><h3>IT Operations Engineer Trainee</h3><ul data-l="es">
       <li>Lancé una solución de rastreo de activos con IA en GCP (chatbot con RAG, Python y APIs internas) para más de 12,000 activos en México, ahorrando ~24 horas de esfuerzo operativo.</li>
       <li>Apoyé la implementación de TI de un nuevo laboratorio de automatización de software (rediseño de 250 nodos de red), coordinando equipos multifuncionales y dando seguimiento al proyecto.</li>
     </ul><ul data-l="en">
@@ -174,7 +203,7 @@ footer{padding:34px 0 40px;font:500 13px var(--mono);text-transform:uppercase;di
 <div class="row"><div class="when">2022 · IPN</div><div><h3>BEIFI</h3>
     <ul data-l="es"><li>Beca de formación en investigación: patrones de comportamiento en pacientes mexicanos con COVID-19 mediante minería de reglas de asociación.</li></ul>
     <ul data-l="en"><li>Research-training scholarship: behavior patterns in Mexican COVID-19 patients using association rule mining.</li></ul></div></div>
-<div class="row"><div class="when">2024 · IPN-ESCOM</div><div><h3><span data-l="es">Ing. en Sistemas Computacionales</span><span data-l="en">B.Sc. Computer Systems Engineering</span></h3>
+<div class="row" id="x-escom"><div class="when">2024 · IPN-ESCOM</div><div><h3><span data-l="es">Ing. en Sistemas Computacionales</span><span data-l="en">B.Sc. Computer Systems Engineering</span></h3>
     <ul><li>GPA 88/100</li></ul></div></div>
 
 </section>
@@ -227,7 +256,9 @@ btn.onclick=()=>set(root.lang==='es'?'en':'es');set(l);
 const tb=document.getElementById('theme');
 function theme(t){root.dataset.theme=t;tb.textContent=t==='dark'?'☀':'☾';tb.setAttribute('aria-label',t==='dark'?'Modo claro':'Modo oscuro')}
 tb.onclick=()=>{const t=root.dataset.theme==='dark'?'light':'dark';theme(t);try{localStorage.setItem('theme',t)}catch(e){}};theme(root.dataset.theme||'light');
+document.querySelectorAll('.num').forEach(n=>{n.onclick=e=>{if(!e.target.closest('a')&&matchMedia('(hover:none)').matches)n.classList.toggle('on')}});
 document.getElementById('y').textContent=new Date().getFullYear();
+document.getElementById('yrs').textContent=Math.floor((Date.now()-new Date(2023,8,1))/31557600000)+'+';
 </script>
 </body>
 </html>
