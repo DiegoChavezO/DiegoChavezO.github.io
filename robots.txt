@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diegochavezo.github.io/sitemap.xml
